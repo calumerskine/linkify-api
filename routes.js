@@ -1,14 +1,12 @@
 const Router = require('express').Router;
 const router = new Router();
 
-const user = require('./model/user/router');
-const pet = require('./model/pet/router');
+const link = require('./model/link/router');
 
 router.route('/').get((req, res) => {
   res.json({ message: 'Welcome to linkify-api API!' });
 });
 
-router.use('/user', user);
-router.use('/pet', pet);
+router.use('/link', link);
 
 module.exports = router;
